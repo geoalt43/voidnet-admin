@@ -3,6 +3,7 @@
 import { useState, useRef, useCallback, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
+import TiptapEditor from '@/components/TiptapEditor';
 
 type FileInputEvent = React.ChangeEvent<HTMLInputElement>;
 type DragEvent = React.DragEvent<HTMLDivElement>;
@@ -185,8 +186,8 @@ export default function EditWhatspilotBlogPage({ params }: { params: Promise<{ i
 
             <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm">
               <h2 className="text-lg font-semibold text-gray-900 mb-5">Content <span className="text-red-500">*</span></h2>
-              <textarea value={content} onChange={(e) => setContent(e.target.value)} rows={18} className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent transition-all font-mono text-sm resize-none" placeholder="Write your blog content here... (HTML supported)" required />
-              <p className="text-xs text-gray-400 mt-2">You can use HTML tags for formatting</p>
+              <TiptapEditor value={content} onChange={setContent} placeholder="Write your blog content here..." />
+              <p className="text-xs text-gray-400 mt-2">Use the toolbar to format your content</p>
             </div>
           </div>
 
