@@ -19,7 +19,7 @@ interface Blog {
   platform: string;
 }
 
-export default function EditGeoaltBlogPage({ params }: { params: Promise<{ id: string }> } }) {
+export default function EditGeoaltBlogPage({ params }: { params: Promise<{ id: string }> }) {
   const [blog, setBlog] = useState<Blog | null>(null);
   const [loading, setLoading] = useState(true);
   const [title, setTitle] = useState('');
