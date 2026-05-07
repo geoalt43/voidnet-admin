@@ -121,6 +121,12 @@ export default function WhatspilotPage() {
               </div>
               <div className="flex gap-2 flex-shrink-0">
                 <Link
+                  href={`/whatspilot/${blog._id}/edit`}
+                  className="px-4 py-2 text-sm font-medium text-blue-600 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors"
+                >
+                  Edit
+                </Link>
+                <Link
                   href={`/whatspilot/${blog._id}`}
                   className="px-4 py-2 text-sm font-medium text-gray-700 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors"
                 >

@@ -32,11 +32,11 @@ export async function PUT(
     const { id } = await params;
     
     const body = await request.json();
-    const { title, slug, description, image, content, metaTitle, metaDescription } = body;
+    const { title, slug, description, image, content, metaTitle, metaDescription, tags } = body;
     
     const blog = await Blog.findByIdAndUpdate(
       id,
-      { title, slug, description, image, content, metaTitle, metaDescription },
+      { title, slug, description, image, content, metaTitle, metaDescription, tags },
       { new: true }
     );
     
